@@ -1,5 +1,7 @@
 package com.kaveri.models;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,15 +16,21 @@ public class CustomerHistory {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	private String CustomerName;
+	private String Customername;
 	
-	private String PhoneNumber;
+	private String Phonenumber;
 	
-	private String ProductName;
+	private String Productname;
+	
+	private String Brandname;
 	
 	private long Quantity;
 	
-	private String VehicleNo;
+	private String Vehicleno;
+	
+	private LocalDate date;
+	
+	private String Address;
 
 	public int getId() {
 		return id;
@@ -32,28 +40,28 @@ public class CustomerHistory {
 		this.id = id;
 	}
 
-	public String getCustomerName() {
-		return CustomerName;
+	public String getCustomername() {
+		return Customername;
 	}
 
-	public void setCustomerName(String customerName) {
-		CustomerName = customerName;
+	public void setCustomername(String customername) {
+		Customername = customername;
 	}
 
-	public String getPhoneNumber() {
-		return PhoneNumber;
+	public String getPhonenumber() {
+		return Phonenumber;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		PhoneNumber = phoneNumber;
+	public void setPhonenumber(String phonenumber) {
+		Phonenumber = phonenumber;
 	}
 
-	public String getProductName() {
-		return ProductName;
+	public String getProductname() {
+		return Productname;
 	}
 
-	public void setProductName(String productName) {
-		ProductName = productName;
+	public void setProductname(String productname) {
+		Productname = productname;
 	}
 
 	public long getQuantity() {
@@ -64,19 +72,47 @@ public class CustomerHistory {
 		Quantity = quantity;
 	}
 
-	public String getVehicleNo() {
-		return VehicleNo;
+	public String getVehicleno() {
+		return Vehicleno;
 	}
 
-	public void setVehicleNo(String vehicleNo) {
-		VehicleNo = vehicleNo;
+	public void setVehicleno(String vehicleno) {
+		Vehicleno = vehicleno;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+	
+
+	public String getBrandname() {
+		return Brandname;
+	}
+
+	public void setBrandname(String brandname) {
+		Brandname = brandname;
 	}
 
 	@Override
 	public String toString() {
-		return "CustomerHistory [id=" + id + ", CustomerName=" + CustomerName + ", PhoneNumber=" + PhoneNumber
-				+ ", ProductName=" + ProductName + ", Quantity=" + Quantity + ", VehicleNo=" + VehicleNo + "]";
+		return "CustomerHistory [id=" + id + ", Customername=" + Customername + ", Phonenumber=" + Phonenumber
+				+ ", Productname=" + Productname + ", Brandname=" + Brandname + ", Quantity=" + Quantity
+				+ ", Vehicleno=" + Vehicleno + ", date=" + date + ", Address=" + Address + "]";
 	}
+
+	
 	
 	
 	
