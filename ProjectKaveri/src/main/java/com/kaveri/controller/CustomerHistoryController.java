@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kaveri.details.HistoryDetails;
 import com.kaveri.models.CustomerHistory;
 import com.kaveri.response.CustomerResponse;
 import com.kaveri.service.CustomerHistoryService;
@@ -19,8 +20,8 @@ public class CustomerHistoryController {
 	private CustomerHistoryService service;
 	
 	@PostMapping("/billing")
-	public CustomerResponse customerhistory(@PathVariable String customername, @PathVariable String phonenumber, @PathVariable String productname, @PathVariable String brandname, @PathVariable long quantity, @PathVariable String vechilenumber, @PathVariable String address ) {
+	public CustomerResponse customerhistory(@RequestBody HistoryDetails details ) {
 		
-		return service.BillingForm(customername, phonenumber, productname, brandname, quantity, vechilenumber, address);
+		return service.BillingForm(details.getCustomername(), details.getPhonenumber(), details.getProductname(), details.getBrandname(), details.getQuantity(), details.getVehicleno(), details.getAddress());
 	}
 }

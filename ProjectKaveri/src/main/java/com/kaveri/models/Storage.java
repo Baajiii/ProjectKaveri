@@ -16,56 +16,43 @@ public class Storage {
 	
 	private String Productname;
 	
-	private String Brandname;
+	private String brandname;
 	
 	private long Quantity;
-
 
 	public int getProductid() {
 		return Productid;
 	}
 
-
 	public void setProductid(int productid) {
 		Productid = productid;
 	}
-
 
 	public String getProductname() {
 		return Productname;
 	}
 
-
 	public void setProductname(String productname) {
 		Productname = productname;
 	}
 
-
 	public String getBrandname() {
-		return Brandname;
+		return brandname;
 	}
-
 
 	public void setBrandname(String brandname) {
-		Brandname = brandname;
+		this.brandname = brandname;
 	}
-
 
 	public long getQuantity() {
 		return Quantity;
 	}
-
 
 	public void setQuantity(long quantity) {
 		Quantity = quantity;
 	}
 
 
-	@Override
-	public String toString() {
-		return "Storage [Productid=" + Productid + ", ProductName=" + Productname + ", BrandName=" + Brandname
-				+ ", Quantity=" + Quantity + "]";
-	}
 	
 	
 }
