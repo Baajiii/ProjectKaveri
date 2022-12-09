@@ -1,6 +1,7 @@
 package com.kaveri.service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,7 @@ public class CustomerHistoryService {
 				row.setDate(today);
 				row.setBrandname(brandname);
 				cusRepo.save(row);
-				response.setMessage("Order Booked");
+				response.setMessage(Quantity + " kg Order Booked");
 				response.setStatus(flag);
 			} else if(str.getQuantity()== 0) {
 				flag = false;
@@ -69,4 +70,12 @@ public class CustomerHistoryService {
 		return response;
 
 	}
+	
+	
+	public List<CustomerHistory> Allhistory(){
+		return cusRepo.findAllcustomerHistory();
+	}
 }
+
+
+
