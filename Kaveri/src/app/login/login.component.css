@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.bg-img{
+  background: url('https://cdnassets.hw.net/2c/86/01a9c8494aeabffd4d2b7bfc3b33/adobestock-106039392-small.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.bg-img:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.content{
+	background-color: rgba(255,255,255,0.13);
+ backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  text-align: center;
+  border-radius: 20px;
+  padding: 60px 32px;
+  width: 370px;
+  transform: translate(-50%,-50%);
+  background: rgba(68, 47, 47, 0);
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+              3px 3px 7px rgba(38, 44, 51, 0.671);
+}
+.content header{
+  color: rgb(250, 250, 251);
+  font-size: 33px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.field{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+ 
+}
+.field span{
+  color: rgb(251, 247, 247);
+  width: 40px;
+  line-height: 45px;
+}
+.field input{
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 1;
+  border-radius: 10px;
+  outline:whitesmoke;
+  color: rgb(240, 233, 233);
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+}
+.space{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.pass-key:valid ~ .show{
+  display: block;
+}
+.pass{
+  text-align: left;
+  margin: 10px 0;
+}
+.pass a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+}
+.pass:hover a{
+  text-decoration: underline;
+}
+.field input[type="submit"]{
+  background: #05930fe5;
+  border: 1px solid #f8f9fa;
+  color: rgb(21, 17, 17);
+  font-size: 18px;
+  width: 100%;
+  align-items: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Montserrat',sans-serif;
+}
+.field input[type="submit"]:hover{
+  background: #55f555;
+}
+.login{
+  color: rgb(244, 238, 238);
+  margin: 20px 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+

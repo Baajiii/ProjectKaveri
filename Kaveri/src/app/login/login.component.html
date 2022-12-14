@@ -1,0 +1,33 @@
+<body>
+  <div class="bg-img">
+    <div class="content">
+      <header>Login</header>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input
+            type="text"
+            id="inputUsername"
+            formControlName="email"
+            class="form-control"
+            placeholder="Username"
+          />
+        </div>
+        <div class="field space">
+          <span class="fa fa-lock"></span>
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control"
+            formControlName="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="pass"></div>
+        <div class="field">
+          <input type="submit" value="LOGIN" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

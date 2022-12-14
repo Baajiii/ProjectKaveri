@@ -30,7 +30,7 @@ public class PriceController {
 		return service.AddPrice(details);
 	}
 
-	//To check the product price
+	//Search the price using brandname
 	@PostMapping("/chechprice/{brandname}")
 	public List<Price> checkPrice(@PathVariable String brandname) {
 		return service.checkPrice(brandname);
