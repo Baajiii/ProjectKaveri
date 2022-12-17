@@ -35,29 +35,8 @@
           </li>
           <li>
             <a href="/price"
-              ><span class="fa fa-credit-card mr-3"></span> Price</a
-            >
-          </li>
-
-          <li>
-            <a href="#"
               ><span class="fa fa-paper-plane mr-3"></span> Contacts</a
             >
-          </li>
-          <li>
-            <form class="form-inline my-2 my-lg-3">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Search the price"
-              />
-              <button
-                class="btn btn-outline-primary btn-lg my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
           </li>
         </ul>
         <div class="footer">
@@ -74,6 +53,32 @@
     </nav>
 
     <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5"></div>
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <h2>Today's Price</h2>
+
+      <div class="tableFixHead">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Date</th>
+              <th>Product Name</th>
+              <th>Brand Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let price of priceData">
+              <td>{{ price.id }}</td>
+              <td>{{ price.date }}</td>
+              <td>{{ price.productname }}</td>
+              <td>{{ price.brandname }}</td>
+              <td>{{ price.price }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    </div>
   </div>
 </body>

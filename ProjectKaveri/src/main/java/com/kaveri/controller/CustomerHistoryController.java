@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,7 @@ import com.kaveri.response.CustomerResponse;
 import com.kaveri.service.CustomerHistoryService;
 
 @RestController
+@CrossOrigin
 public class CustomerHistoryController {
 
 	@Autowired
@@ -26,7 +28,7 @@ public class CustomerHistoryController {
 	@PostMapping("/billing")
 	public CustomerResponse customerhistory(@RequestBody HistoryDetails details ) {
 		
-		return service.BillingForm(details.getCustomername(), details.getPhonenumber(), details.getProductname(), details.getBrandname(), details.getQuantity(), details.getVehicleno(), details.getAddress());
+		return service.BillingForm(details.getCustomername(), details.getPhonenumber(), details.getProductname(), details.getBrandname(), details.getQuantity(), details.getVehicleno(), details.getAddress(), details.getInvoiceno(), details.getHsncode(), details.getDispatch(), details.getEwaybill());
 	}
 	
 	//To see customer details

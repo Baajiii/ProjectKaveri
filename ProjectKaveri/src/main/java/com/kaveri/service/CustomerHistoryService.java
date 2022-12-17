@@ -22,7 +22,7 @@ public class CustomerHistoryService {
 	public StroageRepository strRepo;
 
 	public CustomerResponse BillingForm(String Customername, String Phonenumber, String Productname, String brandname,
-			long Quantity, String Vechileno, String Address) {
+			long Quantity, String Vechileno, String Address, String invoiceno, String hsncode, String dispatch, String ewaybill) {
 
 		LocalDate today = LocalDate.now();
 
@@ -47,6 +47,10 @@ public class CustomerHistoryService {
 				row.setAddress(Address);
 				row.setDate(today);
 				row.setBrandname(brandname);
+				row.setInvoiceno(invoiceno);
+				row.setHsncode(hsncode);
+				row.setDispatch(dispatch);
+				row.setEwaybill(ewaybill);
 				cusRepo.save(row);
 				response.setMessage(Quantity + " kg Order Booked");
 				response.setStatus(flag);

@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-demo',
-  templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.css']
+  selector: 'app-todayprice',
+  templateUrl: './todayprice.component.html',
+  styleUrls: ['./todayprice.component.css']
 })
-export class DemoComponent implements OnInit {
-
+export class TodaypriceComponent implements OnInit {
   priceData !: any;
 
   constructor(private api:ApiService) { }

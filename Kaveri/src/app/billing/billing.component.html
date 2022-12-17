@@ -1,81 +1,205 @@
-<div class="form_wrapper">
-  <div class="form_container">
-    <div class="title_container">
-      <h2>Responsive Registration Form</h2>
-    </div>
-    <div class="row clearfix">
-      <div class="">
-        <form>
-          <div class="input_field">
-            <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-            <input type="email" name="email" placeholder="Email" required />
-          </div>
-          <div class="input_field">
-            <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <div class="input_field">
-            <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-            <input
-              type="password"
-              name="password"
-              placeholder="Re-type Password"
-              required
-            />
-          </div>
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="First Name" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+        <div class="p-4">
+          <h1>
+            <a href="index.html" class="logo"
+              >Kaveri <span>Kaveri Traders</span></a
+            >
+          </h1>
+          <ul class="list-unstyled components mb-5">
+            <li class="active">
+              <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="fa fa-shopping-cart mr-3"></span> Billing</a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="fa fa-archive mr-3"></span> Storage</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="fa fa-sticky-note mr-3"></span> Add Products</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="fa fa-suitcase mr-3"></span> Customer History</a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="fa fa-cogs mr-3"></span> Price</a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="fa fa-paper-plane mr-3"></span> Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <div class="form_wrapper">
+          <div class="form_container">
+            <div class="row clearfix">
+              <div class="">
+                <form>
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                    <input
+                      type="text"
+                      name="Customer name"
+                      placeholder="Customer Name"
+                      required
+                    />
+                  </div>
+                  <div class="input_field select_option">
+                    <select>
+                      <option>Select the Product name</option>
+                      <option>Steel</option>
+                      <option>Cement</option>
+                    </select>
+                    <div class="select_arrow"></div>
+                  </div>
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input
+                      type="text"
+                      name="Brand Name"
+                      placeholder="Brand Name"
+                      required
+                    />
+                  </div>
+                  <div class="row clearfix">
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-phone"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="Phone number"
+                          placeholder="+91"
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-plus-square"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="Quantity"
+                          placeholder="Quantity "
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-address-card"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="Address"
+                          placeholder="Address From"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-address-card"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="Address"
+                          placeholder="To "
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-address-card"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="Invoice no"
+                          placeholder="Invoice no "
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-address-card"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="HSN code"
+                          placeholder="HSN code "
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-address-card"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="EWay Bill"
+                          placeholder="EWay bill "
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <input class="button" type="submit" value="Confirm" />
+                </form>
               </div>
             </div>
-            <div class="col_half">
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Last Name"
-                  required
-                />
-              </div>
-            </div>
           </div>
-          <div class="input_field radio_option">
-            <input type="radio" name="radiogroup1" id="rd1" />
-            <label for="rd1">Male</label>
-            <input type="radio" name="radiogroup1" id="rd2" />
-            <label for="rd2">Female</label>
-          </div>
-          <div class="input_field select_option">
-            <select>
-              <option>Select a country</option>
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-            <div class="select_arrow"></div>
-          </div>
-          <div class="input_field checkbox_option">
-            <input type="checkbox" id="cb1" />
-            <label for="cb1">I agree with terms and conditions</label>
-          </div>
-          <div class="input_field checkbox_option">
-            <input type="checkbox" id="cb2" />
-            <label for="cb2">I want to receive the newsletter</label>
-          </div>
-          <input class="button" type="submit" value="Register" />
-        </form>
+        </div>
+
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
       </div>
     </div>
-  </div>
-</div>
-<p class="credit">
-  Developed by
-  <a href="http://www.designtheway.com" target="_blank">Design the way</a>
-</p>
+  </body>
+</html>

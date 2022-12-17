@@ -17,6 +17,15 @@ private String Customername;
 	private String Vehicleno;
 		
 	private String Address;
+	
+	private String invoiceno;
+	 
+	private String hsncode;
+	
+	private String dispatch;
+	
+	private String ewaybill;
+	
 
 	public String getCustomername() {
 		return Customername;
@@ -72,6 +81,40 @@ private String Customername;
 
 	public void setAddress(String address) {
 		Address = address;
+	}
+
+	public String getInvoiceno() {
+		return invoiceno;
+	}
+
+	public void setInvoiceno(String invoiceno) {
+		this.invoiceno = invoiceno;
+	}
+
+	public String getHsncode() {
+		return hsncode;
+	}
+
+	public void setHsncode(String hsncode) {
+		this.hsncode = hsncode;
+	}
+
+	
+
+	public String getDispatch() {
+		return dispatch;
+	}
+
+	public void setDispatch(String dispatch) {
+		this.dispatch = dispatch;
+	}
+
+	public String getEwaybill() {
+		return ewaybill;
+	}
+
+	public void setEwaybill(String ewaybill) {
+		this.ewaybill = ewaybill;
 	}
 	
 	

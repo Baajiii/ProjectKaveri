@@ -31,6 +31,14 @@ public class CustomerHistory {
 	private LocalDate date;
 	
 	private String Address;
+	
+	private String invoiceno;
+	
+	private String hsncode;
+	 
+	private String dispatch;
+	
+	private String Ewaybill;
 
 	public int getId() {
 		return id;
@@ -104,12 +112,49 @@ public class CustomerHistory {
 	public void setBrandname(String brandname) {
 		Brandname = brandname;
 	}
+	
+	
+
+	public String getInvoiceno() {
+		return invoiceno;
+	}
+
+	public void setInvoiceno(String invoiceno) {
+		this.invoiceno = invoiceno;
+	}
+
+	public String getHsncode() {
+		return hsncode;
+	}
+
+	public void setHsncode(String hsncode) {
+		this.hsncode = hsncode;
+	}
+
+	
+
+	public String getDispatch() {
+		return dispatch;
+	}
+
+	public void setDispatch(String dispatch) {
+		this.dispatch = dispatch;
+	}
+
+	public String getEwaybill() {
+		return Ewaybill;
+	}
+
+	public void setEwaybill(String ewaybill) {
+		Ewaybill = ewaybill;
+	}
 
 	@Override
 	public String toString() {
 		return "CustomerHistory [id=" + id + ", Customername=" + Customername + ", Phonenumber=" + Phonenumber
 				+ ", Productname=" + Productname + ", Brandname=" + Brandname + ", Quantity=" + Quantity
-				+ ", Vehicleno=" + Vehicleno + ", date=" + date + ", Address=" + Address + "]";
+				+ ", Vehicleno=" + Vehicleno + ", date=" + date + ", Address=" + Address + ", invoiceno=" + invoiceno
+				+ ", hsncode=" + hsncode + ", dispatch=" + dispatch + ", Ewaybill=" + Ewaybill + "]";
 	}
 
 	
