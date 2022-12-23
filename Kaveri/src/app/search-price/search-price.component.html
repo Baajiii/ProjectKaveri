@@ -74,16 +74,46 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
-      <div class="animated-title">
-        <div class="text-top">
-          <div>
-            <span>Welcome to</span>
-            <span>Kaveri Traders</span>
-          </div>
+      <h2>Search Price</h2>
+      <div class="container">
+        <div class="d-flex justify-content-center h-100">
+          <form [formGroup]="searchForm">
+            <div class="searchbar">
+              <input
+                class="form-control"
+                class="search_input"
+                formControlName="searchform"
+                type="text"
+                placeholder="Search..."
+              />
+              <a (click)="search()" class="search_icon"
+                ><i class="fas fa-search"></i
+              ></a>
+            </div>
+          </form>
         </div>
-        <div class="text-bottom">
-          <div>Tirchy</div>
-        </div>
+      </div>
+      <div class="tableFixHead">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Date</th>
+              <th>Product Name</th>
+              <th>Brand Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let price of priceData">
+              <td>{{ price.id }}</td>
+              <td>{{ price.date }}</td>
+              <td>{{ price.productname }}</td>
+              <td>{{ price.brandname }}</td>
+              <td>{{ price.price }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </div>

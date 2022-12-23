@@ -74,16 +74,27 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
-      <div class="animated-title">
-        <div class="text-top">
-          <div>
-            <span>Welcome to</span>
-            <span>Kaveri Traders</span>
-          </div>
-        </div>
-        <div class="text-bottom">
-          <div>Tirchy</div>
-        </div>
+      <h2>Products Avalaible</h2>
+
+      <div class="tableFixHead">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Product Name</th>
+              <th>Brand Name</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of ProductData">
+              <td>{{ product.productid }}</td>
+              <td>{{ product.productname }}</td>
+              <td>{{ product.brandname }}</td>
+              <td>{{ product.quantity }} Kg</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </div>

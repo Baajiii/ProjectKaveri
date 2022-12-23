@@ -12,12 +12,13 @@ constructor(private router: Router) { }
 
 authenticate(login: LoginData): boolean {
   if (this.checkCredentials(login)) {
+    sessionStorage.setItem('username', login.username)
     this.isAuthenticated = true;
-    this.router.navigate(['../home']);
+    this.router.navigate(['/home']);
     return true;
   }
   alert("Incorrect Login or Password");
-  this.router.navigate(['../']);
+  this.router.navigate(['']);
   this.isAuthenticated = false;
   return false;
 
@@ -38,6 +39,6 @@ checkPassword(password: string): boolean {
 
 logout() {
   this.isAuthenticated = false;
-  this.router.navigate(['/home']);
+  this.router.navigate(['']);
 }
 }

@@ -52,7 +52,7 @@ public class CustomerHistoryService {
 				row.setDispatch(dispatch);
 				row.setEwaybill(ewaybill);
 				cusRepo.save(row);
-				response.setMessage(Quantity + " kg Order Booked");
+				response.setMessage(Quantity + " kg Order Booked for Mr/Ms. " + Customername);
 				response.setStatus(flag);
 			} else if(str.getQuantity()== 0) {
 				flag = false;

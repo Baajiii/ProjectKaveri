@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 export class CustomerhistoryComponent implements OnInit {
  
   HistoryData !: any;
-
+  firstName: any;
   constructor(private api : ApiService ) { }
 
   ngOnInit(): void {
@@ -23,4 +23,16 @@ export class CustomerhistoryComponent implements OnInit {
     })
   }
 
+  Search(){
+    if(this.firstName == ""){
+      this.ngOnInit();
+    }else{
+      this.HistoryData = this.HistoryData.filter(res => {
+        return res.customername.match(this.firstName);
+      })
+    }
+  }
+  logout(){
+    sessionStorage.clear();
+  }
 }

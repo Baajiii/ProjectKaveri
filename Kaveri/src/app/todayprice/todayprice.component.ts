@@ -20,4 +20,8 @@ gettodayprice(){
     this.priceData = res;
   })
 }
+
+logout(){
+  sessionStorage.clear();
+}
 }

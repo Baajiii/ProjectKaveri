@@ -1,205 +1,270 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="wrapper d-flex align-items-stretch">
-      <nav id="sidebar">
-        <div class="custom-menu">
-          <button type="button" id="sidebarCollapse" class="btn btn-primary">
-            <i class="fa fa-bars"></i>
-            <span class="sr-only">Toggle Menu</span>
-          </button>
-        </div>
-        <div class="p-4">
-          <h1>
-            <a href="index.html" class="logo"
-              >Kaveri <span>Kaveri Traders</span></a
+<body>
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="custom-menu"></div>
+      <div class="p-4">
+        <h1>
+          <a href="/home" class="logo">Kaveri <span>Kaveri Traders</span></a>
+        </h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="/home"><span class="fa fa-home mr-3"></span> Home</a>
+          </li>
+          <li>
+            <a href="billing"
+              ><span class="fa fa-shopping-cart mr-3"></span> Billing</a
             >
-          </h1>
-          <ul class="list-unstyled components mb-5">
-            <li class="active">
-              <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
-            </li>
-            <li>
-              <a href="#"
-                ><span class="fa fa-shopping-cart mr-3"></span> Billing</a
-              >
-            </li>
-            <li>
-              <a href="#"><span class="fa fa-archive mr-3"></span> Storage</a>
-            </li>
-            <li>
-              <a href="#"
-                ><span class="fa fa-sticky-note mr-3"></span> Add Products</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><span class="fa fa-suitcase mr-3"></span> Customer History</a
-              >
-            </li>
-            <li>
-              <a href="#"><span class="fa fa-cogs mr-3"></span> Price</a>
-            </li>
-            <li>
-              <a href="#"
-                ><span class="fa fa-paper-plane mr-3"></span> Contacts</a
-              >
-            </li>
-          </ul>
+          </li>
+          <li>
+            <a href="/storage"
+              ><span class="fa fa-archive mr-3"></span> Storage</a
+            >
+          </li>
+          <li>
+            <a href="/addquantity"
+              ><span class="fa fa-plus mr-3"></span> Add Quantity</a
+            >
+          </li>
+          <li>
+            <a href="/addproduct"
+              ><span class="fa fa-cart-plus mr-3"></span> Add Products</a
+            >
+          </li>
+          <li>
+            <a href="history"
+              ><span class="fa fa-history mr-3"></span> Customer History</a
+            >
+          </li>
+          <li>
+            <a href="/addprice"
+              ><span class="fa fa-plus-circle mr-3"></span> Add Price</a
+            >
+          </li>
+          <li>
+            <a href="/price"
+              ><span class="fa fa-credit-card mr-3"></span>Today Price</a
+            >
+          </li>
+          <li>
+            <a href="/searchprice"
+              ><span class="fa fa-search mr-3"></span> Search Price</a
+            >
+          </li>
+          <li>
+            <a href="/"><span class="fa fa-print mr-3"></span>NB</a>
+          </li>
+          <li>
+            <a href="/" (click)="logout()"
+              ><span class="fa fa-sign-out mr-3"></span> Logout</a
+            >
+          </li>
+        </ul>
+        <div class="footer">
+          <p>
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved
+            <i class="icon-heart" aria-hidden="true"></i> by Baaji & Snehaa
+          </p>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div id="content" class="p-4 p-md-5 pt-5">
-        <div class="form_wrapper">
-          <div class="form_container">
-            <div class="row clearfix">
-              <div class="">
-                <form>
-                  <div class="input_field">
-                    <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                    <input
-                      type="text"
-                      name="Customer name"
-                      placeholder="Customer Name"
-                      required
-                    />
-                  </div>
-                  <div class="input_field select_option">
-                    <select>
-                      <option>Select the Product name</option>
-                      <option>Steel</option>
-                      <option>Cement</option>
-                    </select>
-                    <div class="select_arrow"></div>
-                  </div>
-                  <div class="input_field">
-                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                    <input
-                      type="text"
-                      name="Brand Name"
-                      placeholder="Brand Name"
-                      required
-                    />
-                  </div>
-                  <div class="row clearfix">
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-phone"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="Phone number"
-                          placeholder="+91"
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-plus-square"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="Quantity"
-                          placeholder="Quantity "
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-address-card"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="Address"
-                          placeholder="Address From"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-address-card"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="Address"
-                          placeholder="To "
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-address-card"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="Invoice no"
-                          placeholder="Invoice no "
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-address-card"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="HSN code"
-                          placeholder="HSN code "
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col_half">
-                      <div class="input_field">
-                        <span
-                          ><i aria-hidden="true" class="fa fa-address-card"></i
-                        ></span>
-                        <input
-                          type="text"
-                          name="EWay Bill"
-                          placeholder="EWay bill "
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <div class="form_wrapper">
+        <div class="form_container">
+          <div class="row clearfix">
+            <div class="">
+              <form [formGroup]="billingForm" (ngSubmit)="onFormSubmit()">
+                <div class="form-group input_field">
+                  <span><i aria-hidden="true" class="fa fa-user"></i></span>
 
-                  <input class="button" type="submit" value="Confirm" />
-                </form>
-              </div>
+                  <input
+                    required
+                    type="text"
+                    name="customername"
+                    class="form-control"
+                    formControlName="customername"
+                    [ngClass]="{
+                      'is-invalid': submitted && fval.customername.errors
+                    }"
+                    placeholder=" Enter Customer Name"
+                  />
+                  <div
+                    *ngIf="submitted && fval.customername.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="fval.customername.errors.required">
+                      Customer Name is required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group input_field select_option">
+                  <select
+                    class="form-control"
+                    formControlName="productType"
+                    class="form-control"
+                    placeholder="Select Product Name"
+                    required
+                    (change)="filterSelected($event.target.value)"
+                  >
+                    <option *ngFor="let t of productType" [value]="t.value">
+                      {{ t.name }}
+                    </option>
+                  </select>
+                  <div class="select_arrow"></div>
+                </div>
+                <div class="form-group input_field">
+                  <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input
+                    type="text"
+                    name="BrandName"
+                    formControlName="BrandName"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid': submitted && fval.BrandName.errors
+                    }"
+                    placeholder="Enter Brand Name"
+                    required
+                  />
+                  <div
+                    *ngIf="submitted && fval.BrandName.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="fval.BrandName.errors.required">
+                      BrandName is required
+                    </div>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-phone"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="Phonenumber"
+                        formControlName="Phonenumber"
+                        class="form-control"
+                        placeholder="+91"
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-plus-square"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="Quantity"
+                        formControlName="Quantity"
+                        class="form-control"
+                        placeholder="Quantity "
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-address-book"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="fromAddress"
+                        formControlName="fromAddress"
+                        class="form-control"
+                        placeholder="Address From"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-map-marker"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="dispatch"
+                        class="form-control"
+                        formControlName="dispatch"
+                        placeholder="To "
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-envelope"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="invoiceno"
+                        formControlName="invoiceno"
+                        class="form-control"
+                        placeholder="Invoice no "
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-address-card"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="hsncode"
+                        formControlName="hsncode"
+                        class="form-control"
+                        placeholder="HSN code "
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span
+                        ><i aria-hidden="true" class="fa fa-envelope-o"></i
+                      ></span>
+                      <input
+                        type="text"
+                        name="EWayBill"
+                        formControlName="EWayBill"
+                        class="form-control"
+                        placeholder="EWay bill "
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col_half">
+                    <div class="form-group input_field">
+                      <span><i aria-hidden="true" class="fa fa-bus"></i></span>
+                      <input
+                        type="text"
+                        formControlName="vehicleno"
+                        class="form-control"
+                        placeholder="Vechile Number"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <input class="button" type="submit" value="Confirm" />
+              </form>
             </div>
           </div>
         </div>
-
-        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
       </div>
+
+      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </div>
-  </body>
-</html>
+  </div>
+</body>

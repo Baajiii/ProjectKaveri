@@ -71,21 +71,51 @@
         </div>
       </div>
     </nav>
-
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
-      <div class="animated-title">
-        <div class="text-top">
-          <div>
-            <span>Welcome to</span>
-            <span>Kaveri Traders</span>
-          </div>
-        </div>
-        <div class="text-bottom">
-          <div>Tirchy</div>
-        </div>
-      </div>
-      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+      <form [formGroup]="addquantityForm" id="msform">
+        <!-- fieldsets -->
+
+        <fieldset>
+          <h2>ADD QUANTITY</h2>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="brandname"
+            placeholder="Enter the Brandname"
+          />
+          <span
+            class="larger"
+            *ngIf="
+              !addquantityForm.get('brandname').valid &&
+              addquantityForm.get('brandname').touched
+            "
+            >Please enter Brand Name</span
+          >
+
+          <input
+            type="number"
+            class="form-control"
+            formControlName="quantity"
+            placeholder="Enter the Quantity"
+          /><span
+            class="larger"
+            *ngIf="
+              !addquantityForm.get('quantity').valid &&
+              addquantityForm.get('quantity').touched
+            "
+            >Please enter a valid Quantity</span
+          >
+          <input
+            type="button"
+            name="next"
+            [disabled]="!addquantityForm.valid"
+            (click)="onFormSubmit()"
+            class="next action-button"
+            value="Confirm"
+          />
+        </fieldset>
+      </form>
     </div>
   </div>
 </body>

@@ -4,7 +4,7 @@
       <div class="custom-menu"></div>
       <div class="p-4">
         <h1>
-          <a Router="/home" class="logo">Kaveri <span>Kaveri Traders</span></a>
+          <a href="/home" class="logo">Kaveri <span>Kaveri Traders</span></a>
         </h1>
         <ul class="list-unstyled components mb-5">
           <li class="active">
@@ -16,11 +16,18 @@
             >
           </li>
           <li>
-            <a href="#"><span class="fa fa-archive mr-3"></span> Storage</a>
+            <a href="/storage"
+              ><span class="fa fa-archive mr-3"></span> Storage</a
+            >
           </li>
           <li>
-            <a href="#"
-              ><span class="fa fa-plus-circle mr-3"></span> Add Products</a
+            <a href="/addquantity"
+              ><span class="fa fa-plus mr-3"></span> Add Quantity</a
+            >
+          </li>
+          <li>
+            <a href="/addproduct"
+              ><span class="fa fa-cart-plus mr-3"></span> Add Products</a
             >
           </li>
           <li>
@@ -29,13 +36,26 @@
             >
           </li>
           <li>
-            <a href="/price"
-              ><span class="fa fa-credit-card mr-3"></span> Price</a
+            <a href="/addprice"
+              ><span class="fa fa-plus-circle mr-3"></span> Add Price</a
             >
           </li>
           <li>
             <a href="/price"
-              ><span class="fa fa-paper-plane mr-3"></span> Contacts</a
+              ><span class="fa fa-credit-card mr-3"></span>Today Price</a
+            >
+          </li>
+          <li>
+            <a href="/searchprice"
+              ><span class="fa fa-search mr-3"></span> Search Price</a
+            >
+          </li>
+          <li>
+            <a href="/"><span class="fa fa-print mr-3"></span>NB</a>
+          </li>
+          <li>
+            <a href="/" (click)="logout()"
+              ><span class="fa fa-sign-out mr-3"></span> Logout</a
             >
           </li>
         </ul>
